@@ -1,0 +1,145 @@
+{
+  "domain": "sample_documents",
+  "scan_timestamp": "2026-11-17T07:41:45.970550+00:00",
+  "total_files_analyzed": 4,
+  "discovered_users": [
+    "Director Sarah Connor",
+    "Dr. Robert Vance",
+    "Johnathan Reed",
+    "Network Engineer Dave",
+    "Samantha Hayes",
+    "admin_service",
+    "finance_controller",
+    "jreed"
+  ],
+  "discovered_software": {
+    "Adobe InDesign 2026 (Windows)": 1,
+    "Adobe PDF Library 18.5": 1,
+    "Microsoft Excel 2026": 1,
+    "Microsoft Office Word for Windows": 1,
+    "Microsoft Office Word for Windows 16.0000": 1,
+    "Snagit 2026": 1
+  },
+  "discovered_operating_systems": {
+    "Windows": 2
+  },
+  "discovered_printers": [],
+  "discovered_paths": [
+    "C:\\Users\\jreed\\AppData\\Roaming\\Microsoft\\Templates\\Corporate_Secure.dotx"
+  ],
+  "discovered_emails": [],
+  "documents": [
+    {
+      "file_path": "C:\\Users\\Syed Sameer\\Downloads\\foca\\sample_documents\\Infrastructure_Budget_2026.xlsx",
+      "file_type": "xlsx",
+      "author": "Samantha Hayes",
+      "creator_tool": "Microsoft Excel 2026",
+      "producer": null,
+      "creation_date": null,
+      "modification_date": null,
+      "company": "Defense Cybernetics Global",
+      "title": "Enterprise Infrastructure Cloud Allocation",
+      "raw_properties": {
+        "file_size_bytes": 991,
+        "last_modified_by": "finance_controller"
+      },
+      "extracted_paths": [],
+      "extracted_printers": [],
+      "extracted_emails": [],
+      "extracted_users": [
+        "Samantha Hayes",
+        "finance_controller"
+      ]
+    },
+    {
+      "file_path": "C:\\Users\\Syed Sameer\\Downloads\\foca\\sample_documents\\Network_Architecture_v2.docx",
+      "file_type": "docx",
+      "author": "Johnathan Reed",
+      "creator_tool": "Microsoft Office Word for Windows",
+      "producer": null,
+      "creation_date": "2026-04-12T09:15:00Z",
+      "modification_date": "2026-04-15T14:22:00Z",
+      "company": "Defense Cybernetics Global",
+      "title": "Global Network Architecture & Segmentation",
+      "raw_properties": {
+        "file_size_bytes": 1504,
+        "last_modified_by": "admin_service",
+        "description": "Confidential internal network map and gateway routes",
+        "app_version": "16.0000",
+        "manager": "Director Sarah Connor",
+        "template": "C:\\Users\\jreed\\AppData\\Roaming\\Microsoft\\Templates\\Corporate_Secure.dotx"
+      },
+      "extracted_paths": [
+        "C:\\Users\\jreed\\AppData\\Roaming\\Microsoft\\Templates\\Corporate_Secure.dotx"
+      ],
+      "extracted_printers": [],
+      "extracted_emails": [],
+      "extracted_users": [
+        "Director Sarah Connor",
+        "Johnathan Reed",
+        "admin_service",
+        "jreed"
+      ]
+    },
+    {
+      "file_path": "C:\\Users\\Syed Sameer\\Downloads\\foca\\sample_documents\\Quarterly_Security_Audit.pdf",
+      "file_type": "pdf",
+      "author": "Dr. Robert Vance",
+      "creator_tool": "Adobe InDesign 2026 (Windows)",
+      "producer": "Adobe PDF Library 18.5",
+      "creation_date": null,
+      "modification_date": null,
+      "company": null,
+      "title": "Internal Security Review & Infrastructure Audit",
+      "raw_properties": {
+        "file_size_bytes": 1215,
+        "pdf_engine": "PyMuPDF",
+        "format": "PDF 1.7",
+        "subject": "Enterprise Threat Intelligence",
+        "keywords": "secops, audit, confidential, pci-dss",
+        "page_count": 1
+      },
+      "extracted_paths": [],
+      "extracted_printers": [],
+      "extracted_emails": [],
+      "extracted_users": [
+        "Dr. Robert Vance"
+      ]
+    },
+    {
+      "file_path": "C:\\Users\\Syed Sameer\\Downloads\\foca\\sample_documents\\Server_Topology.png",
+      "file_type": "png",
+      "author": "Network Engineer Dave",
+      "creator_tool": "Snagit 2026",
+      "producer": null,
+      "creation_date": null,
+      "modification_date": null,
+      "company": null,
+      "title": null,
+      "raw_properties": {
+        "file_size_bytes": 397,
+        "image_format": "PNG",
+        "image_mode": "RGB",
+        "image_dimensions": "100x100",
+        "info_software": "Snagit 2026",
+        "info_author": "Network Engineer Dave"
+      },
+      "extracted_paths": [],
+      "extracted_printers": [],
+      "extracted_emails": [],
+      "extracted_users": [
+        "Network Engineer Dave"
+      ]
+    }
+  ],
+  "dns_audit": null,
+  "subdomain_audit": null,
+  "tech_stack": null,
+  "whois_info": null,
+  "social_profiles": null,
+  "crawled_emails": [],
+  "cloud_buckets": [],
+  "internal_ips": [],
+  "crawled_urls": [],
+  "archive_documents": []
+}

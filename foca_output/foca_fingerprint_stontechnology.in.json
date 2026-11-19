@@ -1,0 +1,123 @@
+{
+  "domain": "stontechnology.in",
+  "scan_timestamp": "2026-11-14T19:10:23.612559+00:00",
+  "total_files_analyzed": 1,
+  "discovered_users": [],
+  "discovered_software": {},
+  "discovered_operating_systems": {},
+  "discovered_printers": [],
+  "discovered_paths": [],
+  "discovered_emails": [],
+  "documents": [
+    {
+      "file_path": "C:\\Users\\Syed Sameer\\Downloads\\foca\\foca_output\\cache\\stontechnology.in\\STON.png",
+      "file_type": "png",
+      "author": null,
+      "creator_tool": null,
+      "producer": null,
+      "creation_date": null,
+      "modification_date": null,
+      "company": null,
+      "title": null,
+      "raw_properties": {
+        "file_size_bytes": 93407,
+        "image_format": "PNG",
+        "image_mode": "RGBA",
+        "image_dimensions": "455x549"
+      },
+      "extracted_paths": [],
+      "extracted_printers": [],
+      "extracted_emails": [],
+      "extracted_users": []
+    }
+  ],
+  "dns_audit": {
+    "domain": "stontechnology.in",
+    "a_records": [
+      "3.111.221.164"
+    ],
+    "aaaa_records": [],
+    "mx_records": [
+      {
+        "host": "mx.zoho.in",
+        "priority": 10
+      },
+      {
+        "host": "mx2.zoho.in",
+        "priority": 20
+      },
+      {
+        "host": "mx3.zoho.in",
+        "priority": 50
+      }
+    ],
+    "ns_records": [
+      "ns11.domaincontrol.com",
+      "ns12.domaincontrol.com"
+    ],
+    "txt_records": [
+      "brevo-code:283b631ae0bcf38a1133d12f660d3230",
+      "v=spf1 include:dc-8e814c8572._spfm.stontechnology.in include:dc-8e814c8572._spfm.stontechnology.in ~all"
+    ],
+    "spf_record": "v=spf1 include:dc-8e814c8572._spfm.stontechnology.in include:dc-8e814c8572._spfm.stontechnology.in ~all",
+    "dmarc_record": "v=DMARC1; p=none;",
+    "mail_provider": "Private"
+  },
+  "subdomain_audit": {
+    "domain": "stontechnology.in",
+    "total_found": 0,
+    "subdomains": []
+  },
+  "tech_stack": {
+    "domain": "stontechnology.in",
+    "server_banner": "nginx/1.28.3 (Ubuntu)",
+    "powered_by": null,
+    "status_code": 200,
+    "security_headers": {
+      "Strict-Transport-Security": false,
+      "Content-Security-Policy": false,
+      "X-Frame-Options": false,
+      "X-Content-Type-Options": false,
+      "Referrer-Policy": false
+    },
+    "detected_technologies": [
+      "Nginx"
+    ]
+  },
+  "whois_info": {
+    "domain": "stontechnology.in",
+    "registrar": "GoDaddy",
+    "creation_date": "2026-03-05T18:20:10.400Z",
+    "expiration_date": "2027-03-05T18:20:10.400Z",
+    "updated_date": "2026-03-10T18:23:21.701Z",
+    "status": [
+      "client delete prohibited",
+      "client renew prohibited",
+      "client transfer prohibited",
+      "client update prohibited"
+    ],
+    "nameservers": [
+      "ns11.domaincontrol.com",
+      "ns12.domaincontrol.com"
+    ]
+  },
+  "social_profiles": {
+    "domain": "stontechnology.in",
+    "profiles": {}
+  },
+  "crawled_emails": [
+    "support@stontechnology.in"
+  ],
+  "cloud_buckets": [],
+  "internal_ips": [],
+  "crawled_urls": [
+    "https://stontechnology.in",
+    "https://stontechnology.in/contact",
+    "https://stontechnology.in/free-test",
+    "https://stontechnology.in/login",
+    "https://stontechnology.in/privacy",
+    "https://stontechnology.in/register",
+    "https://stontechnology.in/terms"
+  ],
+  "archive_documents": []
+}

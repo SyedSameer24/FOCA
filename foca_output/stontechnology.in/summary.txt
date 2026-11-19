@@ -1,0 +1,66 @@
+========================================================================
+FOCA ORGANIZATIONAL RECONNAISSANCE & METADATA AUDIT REPORT
+========================================================================
+Target Identifier       : stontechnology.in
+Scan Timestamp          : 2026-11-14T19:10:23.612559+00:00
+Total Documents Audited : 1
+Identified Users/Owners : 0
+Discovered Email Addrs  : 1
+Software / Tools Found  : 0
+Operating Systems Found : 0
+Discovered Subdomains   : 0
+Cloud Storage Buckets   : 0
+Internal Network Leaks  : 0
+Crawled Web Endpoints   : 7
+------------------------------------------------------------------------
+
+1. DISCOVERED USERS & DOCUMENT AUTHORS
+----------------------------------------
+  (None identified)
+
+2. DISCOVERED EMAIL ADDRESSES
+----------------------------------------
+  - support@stontechnology.in
+
+3. EXPOSED CLOUD STORAGE BUCKETS
+----------------------------------------
+  (None identified)
+
+4. INTERNAL NETWORK & PATH LEAKS
+----------------------------------------
+  (None identified)
+
+5. DNS & MAIL INFRASTRUCTURE
+----------------------------------------
+  Mail Provider : Private
+  SPF Record    : v=spf1 include:dc-8e814c8572._spfm.stontechnology.in include:dc-8e814c8572._spfm.stontechnology.in ~all
+  DMARC Record  : v=DMARC1; p=none;
+  MX Records    :
+    - {'host': 'mx.zoho.in', 'priority': 10} (prio: -)
+    - {'host': 'mx2.zoho.in', 'priority': 20} (prio: -)
+    - {'host': 'mx3.zoho.in', 'priority': 50} (prio: -)
+  Name Servers  : ns11.domaincontrol.com, ns12.domaincontrol.com
+
+6. DISCOVERED SUBDOMAINS
+----------------------------------------
+  (None discovered)
+
+7. WEB TECHNOLOGY & SECURITY HEADERS
+----------------------------------------
+  Web Server    : nginx/1.28.3 (Ubuntu)
+  Powered By    : Undisclosed
+  Technologies  : Nginx
+  Security Headers:
+    - Strict-Transport-Security      : MISSING
+    - Content-Security-Policy        : MISSING
+    - X-Frame-Options                : MISSING
+    - X-Content-Type-Options         : MISSING
+    - Referrer-Policy                : MISSING
+
+8. ANALYZED DOCUMENTS CATALOG
+----------------------------------------
+  - STON.png (PNG) | Author: Unknown
+
+========================================================================
+END OF REPORT
+========================================================================

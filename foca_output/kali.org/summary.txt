@@ -1,0 +1,197 @@
+========================================================================
+FOCA ORGANIZATIONAL RECONNAISSANCE & METADATA AUDIT REPORT
+========================================================================
+Target Identifier       : kali.org
+Scan Timestamp          : 2026-11-17T07:43:01.074041+00:00
+Total Documents Audited : 0
+Identified Users/Owners : 0
+Discovered Email Addrs  : 0
+Software / Tools Found  : 0
+Operating Systems Found : 0
+Discovered Subdomains   : 130
+Cloud Storage Buckets   : 0
+Internal Network Leaks  : 0
+Crawled Web Endpoints   : 0
+------------------------------------------------------------------------
+
+1. DISCOVERED USERS & DOCUMENT AUTHORS
+----------------------------------------
+  (None identified)
+
+2. DISCOVERED EMAIL ADDRESSES
+----------------------------------------
+  (None discovered)
+
+3. EXPOSED CLOUD STORAGE BUCKETS
+----------------------------------------
+  (None identified)
+
+4. INTERNAL NETWORK & PATH LEAKS
+----------------------------------------
+  (None identified)
+
+5. DNS & MAIL INFRASTRUCTURE
+----------------------------------------
+  Mail Provider : Google
+  SPF Record    : v=spf1 a ip4:208.88.127.98 ip4:52.44.83.41 include:_spf.google.com include:sendgrid.net ~all
+  DMARC Record  : v=DMARC1; p=none; rua=mailto:dc94040db6314366b5d8c16fb40a986b@dmarc-reports.cloudflare.net,mailto:cu3rgqiu@ag.dmarcian.com; ruf=mailto:cu3rgqiu@fr.dmarcian.com; fo=1;
+  MX Records    :
+    - {'host': 'aspmx.l.google.com', 'priority': 5} (prio: -)
+    - {'host': 'alt1.aspmx.l.google.com', 'priority': 10} (prio: -)
+    - {'host': 'alt2.aspmx.l.google.com', 'priority': 15} (prio: -)
+    - {'host': 'alt3.aspmx.l.google.com', 'priority': 20} (prio: -)
+    - {'host': 'alt4.aspmx.l.google.com', 'priority': 25} (prio: -)
+  Name Servers  : nash.ns.cloudflare.com, nina.ns.cloudflare.com
+
+6. DISCOVERED SUBDOMAINS
+----------------------------------------
+  - 10cake.kali.org
+  - 10year.kali.org
+  - aeacus.kali.org
+  - aphrodite.kali.org
+  - ar.docs.kali.org
+  - archive-10.kali.org
+  - archive-11.kali.org
+  - archive-12.kali.org
+  - archive-2.kali.org
+  - archive-3.kali.org
+  - archive-4.kali.org
+  - archive-5.kali.org
+  - archive-6.kali.org
+  - archive-7.kali.org
+  - archive-8.kali.org
+  - archive-9.kali.org
+  - archive.kali.org
+  - arm.kali.org
+  - artemis.kali.org
+  - artifacts.kali.org
+  - atlas.kali.org
+  - atropos.kali.org
+  - autopkgtest.kali.org
+  - beta.kali.org
+  - bittorrent.kali.org
+  - br.docs.kali.org
+  - bugs.kali.org
+  - buildd-amd64.kali.org
+  - buildd-arm.kali.org
+  - buildd-arm64.kali.org
+  - buildd-armel-staging.kali.org
+  - buildd-armel.kali.org
+  - buildd-armhf-staging.kali.org
+  - buildd-armhf.kali.org
+  - buildd-i386.kali.org
+  - buildd-wsl.kali.org
+  - cdimage-staging.kali.org
+  - cdimage.kali.org
+  - cdimages.kali.org
+  - clio.kali.org
+  - cn.docs.kali.org
+  - coeus.kali.org
+  - crius.kali.org
+  - cronos.kali.org
+  - de.docs.kali.org
+  - demeter.kali.org
+  - dionysus.kali.org
+  - discord.kali.org
+  - docs.kali.org
+  - download.kali.org
+  - downloads.kali.org
+  - dzaa.kali.org
+  - en.docs.kali.org
+  - epimetheus.kali.org
+  - erato.kali.org
+  - es.docs.kali.org
+  - fcee.kali.org
+  - forums-staging.kali.org
+  - forums.kali.org
+  - fr.docs.kali.org
+  - gaia.kali.org
+  - get.kali.org
+  - git.kali.org
+  - hades.kali.org
+  - he.docs.kali.org
+  - hecate.kali.org
+  - helios.kali.org
+  - hera.kali.org
+  - hestia.kali.org
+  - http-staging.kali.org
+  - http.kali.org
+  - iapetus.kali.org
+  - id.docs.kali.org
+  - image-amd64.kali.org
+  - image-arm.kali.org
+  - image-arm64.kali.org
+  - image-nethunter.kali.org
+  - image-wsl.kali.org
+  - image.kali.org
+  - images.kali.org
+  - iris.kali.org
+  - it.docs.kali.org
+  - ja.docs.kali.org
+  - janitor.kali.org
+  - jenkins.kali.org
+  - kali.org
+  - kids.kali.org
+  - lachesis.kali.org
+  - lava.kali.org
+  - leto.kali.org
+  - melpomene.kali.org
+  - minos.kali.org
+  - minos2.kali.org
+  - minos3.kali.org
+  - mirror-status.kali.org
+  - mirror-traces.kali.org
+  - mnemosyne.kali.org
+  - nethunter.kali.org
+  - nike.kali.org
+  - nl.docs.kali.org
+  - oceanus.kali.org
+  - old.kali.org
+  - phobos.kali.org
+  - pkg.kali.org
+  - poseidon.kali.org
+  - purple.kali.org
+  - qa-ui.kali.org
+  - qa.kali.org
+  - redirector.kali.org
+  - repo-staging.kali.org
+  - repo.kali.org
+  - rhea.kali.org
+  - ru.docs.kali.org
+  - shop.kali.org
+  - status-staging.kali.org
+  - status.kali.org
+  - terpsichore.kali.org
+  - tethys.kali.org
+  - tools.kali.org
+  - tr.docs.kali.org
+  - triton.kali.org
+  - urania.kali.org
+  - www.bugs.kali.org
+  - www.docs.kali.org
+  - www.forums.kali.org
+  - www.kali.org
+  - www.pkg.kali.org
+  - www.status.kali.org
+  - www.tools.kali.org
+  - zeus.kali.org
+
+7. WEB TECHNOLOGY & SECURITY HEADERS
+----------------------------------------
+  Web Server    : cloudflare
+  Powered By    : Undisclosed
+  Technologies  : Cloudflare
+  Security Headers:
+    - Strict-Transport-Security      : PRESENT
+    - Content-Security-Policy        : MISSING
+    - X-Frame-Options                : PRESENT
+    - X-Content-Type-Options         : PRESENT
+    - Referrer-Policy                : PRESENT
+
+8. ANALYZED DOCUMENTS CATALOG
+----------------------------------------
+  (No documents analyzed)
+
+========================================================================
+END OF REPORT
+========================================================================

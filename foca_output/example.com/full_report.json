@@ -1,0 +1,22 @@
+{
+  "domain": "example.com",
+  "scan_timestamp": "2026-11-14T18:59:57.860139+00:00",
+  "total_files_analyzed": 0,
+  "discovered_users": [],
+  "discovered_software": {},
+  "discovered_operating_systems": {},
+  "discovered_printers": [],
+  "discovered_paths": [],
+  "discovered_emails": [],
+  "documents": [],
+  "dns_audit": null,
+  "subdomain_audit": null,
+  "tech_stack": null,
+  "whois_info": null,
+  "social_profiles": null,
+  "crawled_emails": [],
+  "cloud_buckets": [],
+  "internal_ips": [],
+  "crawled_urls": [],
+  "archive_documents": []
+}

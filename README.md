@@ -1,0 +1,227 @@
+# FOCA CLI: Metadata & Full Organizational OSINT Suite
+
+A modular Python command-line utility for Linux, Windows PowerShell, and Windows Command Prompt (CMD). It combines the document metadata discovery workflows of FOCA with a complete passive reconnaissance and organizational footprinting engine.
+
+---
+
+## Capabilities
+
+1. **Document Discovery (Scraper)**:
+   - **DuckDuckGo Engine**: Discovers public documents across target domains via search dorking without requiring API keys.
+   - **Internal Web Spider**: Traverses internal links on a target website to extract directly linked documents.
+   - **Local Directory Mode**: Recursively scans and parses pre-existing document caches or local directories.
+
+2. **Safe Concurrent Downloader**:
+   - Multi-threaded streaming downloads with safety caps (25MB limit per file, 10s connection timeout).
+   - Pre-validation of file magic bytes (`%PDF-`, `PK\x03\x04`, `\x89PNG`, `\xff\xd8\xff`) to reject HTML error pages.
+   - Domain-isolated file caching in `.foca_cache/<domain>/`.
+
+3. **Multi-Format Metadata Extractor**:
+   - **PDF**: PyMuPDF (`fitz`) and XMP XML inspection with fallback to `PyPDF2`.
+   - **Modern Office (OOXML)**: Inspects `.docx`, `.xlsx`, `.pptx` in-memory using `defusedxml` to parse `docProps/core.xml` and `docProps/app.xml`.
+   - **Images**: Extracts EXIF data (`.jpg`, `.jpeg`, `.png`, `.tiff`, `.webp`) via Pillow.
+
+4. **Intelligence & Fingerprinting Analyzer**:
+   - Extracts internal usernames, network folder paths (`C:\Users\...`, `/home/...`), printer configurations, operating system indicators, software versions, and corporate email addresses.
+
+5. **DNS & Mail Server Audit (`--dns`)**:
+   - Resolves A, AAAA, MX (mail exchanges), NS (nameservers), and TXT records.
+   - Identifies mail provider (Google Workspace, Microsoft 365, Proton, Zoho, etc.).
+   - Parses SPF records (`v=spf1`) and DMARC policies (`_dmarc.<domain>`).
+
+6. **Passive Subdomain Discovery (`--subdomains`)**:
+   - Queries public Certificate Transparency logs (crt.sh).
+   - Discovers active and historical subdomains without sending any direct network traffic to the target.
+
+7. **Web Tech & Security Headers (`--tech`)**:
+   - Detects web servers (Nginx, Apache, Cloudflare, IIS) and technology stacks.
+   - Audits security headers: HSTS, Content-Security-Policy, X-Frame-Options, X-Content-Type-Options, Referrer-Policy.
+
+8. **Domain Registration / Whois (`--whois`)**:
+   - Queries standard RDAP (Registration Data Access Protocol).
+   - Retrieves registrar name, creation date, expiration date, and registered nameservers.
+
+9. **Social Media Profiles (`--social`)**:
+   - Scans organization homepage for official links to GitHub, LinkedIn, Twitter/X, YouTube, Facebook, and Instagram.
+
+10. **Interactive Terminal Setup Wizard**:
+    - Running without flags opens an interactive terminal menu walking you through all options.
+
+---
+
+## Directory Structure
+
+```
+.
+├── main.py                     # Single CLI executable entrypoint
+├── foca.bat                    # Windows Command Prompt launcher
+├── foca.ps1                    # Windows PowerShell launcher
+├── requirements.txt            # Python dependencies
+├── README.md                   # Documentation
+├── foca_core/
+│   ├── __init__.py             # Public package exports
+│   ├── models.py               # Pydantic data schemas
+│   ├── scraper.py              # Discovery (DuckDuckGo, Spider, Local)
+│   ├── downloader.py           # Concurrent stream downloader
+│   ├── extractor.py            # Multi-format metadata extractor
+│   ├── analyzer.py             # OSINT fingerprinting heuristics
+│   ├── dns_audit.py            # DNS & mail security auditor
+│   ├── subdomains.py           # Certificate Transparency subdomain discovery
+│   ├── tech_stack.py           # Server & HTTP security header analyzer
+│   ├── whois_lookup.py         # RDAP domain registration checker
+│   ├── social_finder.py        # Social media profile finder
+│   ├── wizard.py               # Interactive terminal setup wizard
+│   └── reporter.py             # Rich dashboard & JSON/CSV exporters
+└── tests/
+    ├── test_foca_core.py       # Core metadata extraction tests
+    ├── test_cli_network.py     # Scraper, downloader, and CLI tests
+    ├── test_wizard.py          # Interactive wizard tests
+    ├── test_osint_modules.py   # OSINT module tests
+    └── test_osint_suite.py     # OSINT suite integration tests
+```
+
+---
+
+## Installation (Windows / Linux / macOS)
+
+```bash
+# Clone or navigate to the project directory
+cd foca
+
+# Create and activate a virtual environment (optional)
+python -m venv .venv
+# On Windows PowerShell: .venv\Scripts\Activate.ps1
+# On Windows CMD: .venv\Scripts\activate.bat
+# On Linux/macOS: source .venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+---
+
+## How to Run
+
+### 1. Interactive Terminal Screen (Recommended)
+Simply launch without any flags to open the step-by-step interactive setup screen:
+
+- **Windows PowerShell**:
+  ```powershell
+  python main.py
+  # or
+  .\foca.ps1
+  ```
+
+- **Windows Command Prompt (CMD)**:
+  ```cmd
+  python main.py
+  # or
+  foca.bat
+  ```
+
+- **Linux / macOS**:
+  ```bash
+  python3 main.py
+  ```
+
+---
+
+### 2. Direct Command-Line Usage (Automated Mode)
+
+You can run individual modules or combine them:
+
+#### Run Full Organization Footprint (All Modules)
+```bash
+python main.py -d target.com --all
+```
+
+#### Run DNS and Mail Audit Only
+```bash
+python main.py -d target.com --dns
+```
+
+#### Run Passive Subdomain Discovery Only
+```bash
+python main.py -d target.com --subdomains
+```
+
+#### Run Web Tech & Security Headers Audit
+```bash
+python main.py -d target.com --tech
+```
+
+#### Run Domain Registration / Whois Lookup
+```bash
+python main.py -d target.com --whois
+```
+
+#### Run Social Media Profile Finder
+```bash
+python main.py -d target.com --social
+```
+
+#### Run Document Metadata Discovery (FOCA Core)
+```bash
+python main.py -d target.com -m 25
+```
+
+---
+
+## Ready-to-Use Fast Scripts
+
+We included four fast, dedicated runner scripts in the `scripts/` folder for one-command tasks:
+
+### 1. Quick Recon (Fast 3-second domain triage)
+Runs DNS, Web Tech, Subdomains, and Whois together:
+- **PowerShell**: `python scripts/quick_recon.py example.com` or `.\quick_recon.ps1 example.com`
+- **CMD**: `quick_recon.bat example.com`
+- **Linux**: `python3 scripts/quick_recon.py example.com`
+
+### 2. Mail Security Audit (SPF & DMARC verification)
+Inspects mail servers and spoofing protections:
+- **PowerShell**: `python scripts/mail_audit.py example.com` or `.\mail_audit.ps1 example.com`
+- **CMD**: `mail_audit.bat example.com`
+- **Linux**: `python3 scripts/mail_audit.py example.com`
+
+### 3. Passive Subdomain Hunter
+Finds subdomains and optionally saves them to a text file:
+- **PowerShell / CMD**: `python scripts/subdomain_hunt.py example.com --save`
+- **Linux**: `python3 scripts/subdomain_hunt.py example.com --save`
+
+### 4. Local Document Metadata Audit (Offline)
+Extracts metadata from all files in a folder and exports to CSV:
+- **PowerShell**: `python scripts/audit_docs.py C:\path\to\documents` or `.\audit_docs.ps1 C:\path\to\documents`
+- **CMD**: `audit_docs.bat C:\path\to\documents`
+- **Linux**: `python3 scripts/audit_docs.py /path/to/documents`
+
+---
+
+## Built-In Help & Recipe Commands
+
+- **Formatted Command Help Screen**:
+  ```bash
+  python main.py --help
+  ```
+
+- **Real-World Scenarios and Recipes**:
+  ```bash
+  python main.py --examples
+  ```
+
+#### Analyze a Local Folder of Documents (Offline)
+```bash
+python main.py -l C:\path\to\documents -o .\my_reports
+```
+
+#### Export Raw JSON to stdout (for pipes and jq)
+```bash
+python main.py -d target.com --dns --tech --json
+```
+
+---
+
+## Running Automated Tests
+
+```bash
+python -m unittest discover -s tests -p "test_*.py" -v
+```

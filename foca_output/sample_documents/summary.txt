@@ -1,0 +1,61 @@
+========================================================================
+FOCA ORGANIZATIONAL RECONNAISSANCE & METADATA AUDIT REPORT
+========================================================================
+Target Identifier       : sample_documents
+Scan Timestamp          : 2026-11-17T07:41:45.970550+00:00
+Total Documents Audited : 4
+Identified Users/Owners : 8
+Discovered Email Addrs  : 0
+Software / Tools Found  : 6
+Operating Systems Found : 1
+Discovered Subdomains   : 0
+Cloud Storage Buckets   : 0
+Internal Network Leaks  : 1
+Crawled Web Endpoints   : 0
+------------------------------------------------------------------------
+
+1. DISCOVERED USERS & DOCUMENT AUTHORS
+----------------------------------------
+  - Director Sarah Connor
+  - Dr. Robert Vance
+  - Johnathan Reed
+  - Network Engineer Dave
+  - Samantha Hayes
+  - admin_service
+  - finance_controller
+  - jreed
+
+2. DISCOVERED EMAIL ADDRESSES
+----------------------------------------
+  (None discovered)
+
+3. EXPOSED CLOUD STORAGE BUCKETS
+----------------------------------------
+  (None identified)
+
+4. INTERNAL NETWORK & PATH LEAKS
+----------------------------------------
+  - C:\Users\jreed\AppData\Roaming\Microsoft\Templates\Corporate_Secure.dotx
+
+5. DNS & MAIL INFRASTRUCTURE
+----------------------------------------
+  (DNS audit not performed)
+
+6. DISCOVERED SUBDOMAINS
+----------------------------------------
+  (None discovered)
+
+7. WEB TECHNOLOGY & SECURITY HEADERS
+----------------------------------------
+  (Tech stack audit not performed)
+
+8. ANALYZED DOCUMENTS CATALOG
+----------------------------------------
+  - Infrastructure_Budget_2026.xlsx (XLSX) | Author: Samantha Hayes
+  - Network_Architecture_v2.docx (DOCX) | Author: Johnathan Reed
+  - Quarterly_Security_Audit.pdf (PDF) | Author: Dr. Robert Vance
+  - Server_Topology.png (PNG) | Author: Network Engineer Dave
+
+========================================================================
+END OF REPORT
+========================================================================
